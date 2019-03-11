@@ -17,6 +17,7 @@ class Fib(object):
             return r
         raise StopIteration()
 
+# 因为我们实现了next函数，所以我们可以使用这个类：当迭代器
 
 # Using Fib object
 
