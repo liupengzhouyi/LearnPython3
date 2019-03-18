@@ -8,7 +8,7 @@ for i in list:
 print("----------------------------------")
 
 
-# range 函数
+# range 函数112
 
 listA = range(1,5)
 
