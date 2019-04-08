@@ -6,19 +6,53 @@ Python从设计之初就已经是一门面向对象的语言，正因为如此�
 
 ## 创建类
 
-
-`
-
-
-
-
-class ClassName:
-    '类的帮助信息：比如：这是一个学生类'
-    studentName = 'liupeng'
-    studentSex = 0
+    class Student:
+        '这是一个学生类'
+        studentCount = 0
     
-    def __init__():
-        
+        def __init__(self, name, sex, age, number):
+            self.name = name
+            self.sex = sex
+            self.age = age
+            self.number = number
+            Student.studentCount = Student.studentCount + 1
+    
+    
+    
+        def printeeee(self):
+            print('-------------------------')
+            print('| student name: ', self.name)
+            print('| student number: ', self.number)
+            if (self.sex == 0):
+                print('| student sex: 男')
+            else:
+                print('| student sex: 女')
+            print('| student age:', self.age)
+            print('-------------------------')
+
+
+
+## 使用类
+
+    from 面向对象.Employee import Student
+    
+    print(Student.__doc__)
+    
+    
+    t = Student("liupeng", 0, 21, "16671259125")
+    t.printeeee()
+    
+    print(Student.studentCount)
+    
+    
+## 对当前类的解释
+
+
+    
+    
     
 
-`
+    
+    
+    
+    

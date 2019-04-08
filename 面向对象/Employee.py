@@ -3,7 +3,7 @@
 
 class Student:
     '这是一个学生类'
-    studentCount = 0
+    studentCount = 0    # 全局变量
 
     def __init__(self, name, sex, age, number):
         self.name = name
@@ -15,7 +15,7 @@ class Student:
 
 
     def printeeee(self):
-        print('-------------------------')
+        print('--------------------------------------------------')
         print('| student name: ', self.name)
         print('| student number: ', self.number)
         if (self.sex == 0):
@@ -23,7 +23,7 @@ class Student:
         else:
             print('| student sex: 女')
         print('| student age:', self.age)
-        print('-------------------------')
+        print('--------------------------------------------------')
 
 
 
