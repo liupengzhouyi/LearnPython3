@@ -8,11 +8,9 @@ class SchoolMember:
         self.age = age
         print('(Initialized SchoolMember: {})'.format(self.name))
 
-
     def tell(self):
         '''我的基本信息'''
         print('Name:"{}" Age:"{}"'.format(self.name, self.age))
-
 
 class Teacher(SchoolMember):
     '''代表一个老师'''
@@ -26,7 +24,6 @@ class Teacher(SchoolMember):
         SchoolMember.tell(self)
         print('(Salary: {:d})'.format(self.salary))
 
-
 class Student(SchoolMember):
     '''代表一个学生'''
     def __init__(self, name, age, marks):
@@ -34,14 +31,11 @@ class Student(SchoolMember):
         self.marks = marks
         print('(Initialized Student: {})'.format(self.name))
 
-
     def tell(self):
         SchoolMember.tell(self)
         print('Marks:"{:d}"'.format(self.marks))
 
-
 t = Teacher('Mrs. Shrividya', 40, 30000)
-
 s = Student('liupeng', 25, 75)
 
 print()
