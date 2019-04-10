@@ -7,4 +7,10 @@ print(something)
 
 
 
+print('123' == reversed('321'))
+
+
+
+
+
 
