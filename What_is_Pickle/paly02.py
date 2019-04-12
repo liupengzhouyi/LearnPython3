@@ -12,5 +12,3 @@ f.close()
 
 s.print()
 
-
-

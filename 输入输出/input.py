@@ -5,12 +5,4 @@ something = input('请输入；')
 
 print(something)
 
-
-
 print('123' == reversed('321'))
-
-
-
-
-
-
