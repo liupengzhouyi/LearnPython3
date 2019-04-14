@@ -6,7 +6,10 @@ class Person:
         print('Hello, how are you?')
 
 
+
+
 p = Person()
 p.say_hi()
 
 Person().say_hi()
+

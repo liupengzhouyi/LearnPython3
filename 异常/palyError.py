@@ -8,9 +8,9 @@ try:
 except EOFError:
     print("字符输入停止！")
 except KeyboardInterrupt:
-    print("")
+    print("你的输入错误！")
 else:
-    print()
+    print("你的输入信息{}".format(text))
 
 
 
