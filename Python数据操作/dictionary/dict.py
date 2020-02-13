@@ -50,3 +50,7 @@ me1.say()
 print(temp)
 temp.pop(3)
 print(temp)
+
+# select
+print(temp.get(1))
+
