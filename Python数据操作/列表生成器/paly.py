@@ -30,6 +30,17 @@ temp1 = {'短程': 1000, '中程':5000, '长程':10000}
 for k, v in temp1.items():
     print(k, '=>', v)
 
+# if-else
+newList = [x if x % 2 == 0 else 0 for x in range(1,20)]
+
+# for x in range(0,20):
+#     if x % 2 == 0:
+#         newList.append(x)
+#     else:
+#         newList.append(0)
+
+print(newList)
+
 
 
 
