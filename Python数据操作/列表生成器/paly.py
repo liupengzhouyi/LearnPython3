@@ -4,10 +4,9 @@ for i in range(20):
 print(myList)
 
 myList1 = (range(1, 20))
-
 print(myList1)
-# for i in myList1:
-#     print(i,)
+for i in myList1:
+    print(i)
 
 ## 新的玩法
 
