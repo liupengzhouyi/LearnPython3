@@ -45,3 +45,5 @@ print(myList[::5])
 ## all
 print(myList[:])
 print(myList[::])
+print(myList[::-1])
+print(myList[6:3:-1])
