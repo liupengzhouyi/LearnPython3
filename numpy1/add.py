@@ -10,3 +10,4 @@ print(c)
 d = numpy.concatenate((a, b), axis= 0)
 
 print(d)
+
