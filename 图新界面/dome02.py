@@ -1,9 +1,7 @@
 from turtle import *
 
 width(4)
-
 # forword(200)
-
 
 pencolor('red')
 forward(50)
