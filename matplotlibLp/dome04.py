@@ -30,6 +30,7 @@ plt.bar(x2, y2, align =  'center')
 plt.title('Bar graph')
 plt.ylabel('Y axis')
 plt.xlabel('X axis')
+plt.savefig('image001.png')
 # 展示图像
 plt.show()
 
