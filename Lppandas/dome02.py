@@ -45,11 +45,25 @@ print(s)
 df = df.append(s, ignore_index=True)
 print(df)
 
+df = pandas.DataFrame({'A': ['foo', 'bar', 'foo', 'bar',
+                        'foo', 'bar', 'foo', 'foo'],
+                  'B': ['one', 'one', 'two', 'three',
+                         'two', 'two', 'one', 'three'],
+                    'C': numpy.random.randn(8),
+                   'D': numpy.random.randn(8)})
 
 
 
 
 
+print(df)
+stacked = df.stack()
+print(stacked)
+
+
+stacked = df.groupby('A').sum().stack()
+print(stacked)
+print(stacked.unstack())
 
 
 
