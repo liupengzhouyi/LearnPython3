@@ -9,7 +9,7 @@ datas = pandas.date_range('20200226', periods=4)
 
 print(datas)
 
-df = pandas.DataFrame(numpy.random.randn(4, 3), index=datas, columns=list('127'))
+df = pandas.DataFrame(numpy.random.randn(4, 3), index=datas, columns=list('127123'))
 
 print(df)
 
