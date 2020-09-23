@@ -7,12 +7,6 @@ plt.figure(figsize=(20, 21), dpi=200)
 
 df = pd.read_csv('sh600000.csv')
 
-print(df)
-
-print(df['date'])
-
-print(df['open'])
-
 # 激活第一个 subplot
 plt.subplot(3,  1,  1)
 # 绘制第一个图像
