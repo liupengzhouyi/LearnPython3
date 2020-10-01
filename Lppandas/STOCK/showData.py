@@ -3,25 +3,29 @@ import matplotlib.pyplot as plt
 import pylab
 
 # 创建一个 10*20 的点, 分辨率 200
-plt.figure(figsize=(20, 21), dpi=200)
+plt.figure(figsize=(40, 21), dpi=100)
 
 df = pd.read_csv('sh600000.csv')
+
+numberI = 0
+number = 100
 
 # 激活第一个 subplot
 plt.subplot(3,  1,  1)
 # 绘制第一个图像
-plt.plot(df['date'][0:100], df['open'][0:100], color='r')
-plt.plot(df['date'][0:100], df['high'][0:100], color='b')
-plt.plot(df['date'][0:100], df['low'][0:100], color='y')
-plt.plot(df['date'][0:100], df['close'][0:100], color='g')
+plt.plot(df['date'][numberI:number],  df['open'][numberI:number], color='r')
+plt.plot(df['date'][numberI:number],  df['high'][numberI:number], color='b')
+plt.plot(df['date'][numberI:number],   df['low'][numberI:number], color='y')
+plt.plot(df['date'][numberI:number], df['close'][numberI:number], color='g')
 
 plt.subplot(3,  1,  2)
-plt.bar(df['date'][0:100], (df['open'][0:100] - df['close'][0:100]), align = 'center')
+
+plt.bar(df['date'][numberI:number], (df['open'][numberI:number] - df['close'][numberI:number]), align = 'center')
 
 
 lista = []
 listb = []
-for i in range(100):
+for i in range(number):
     if df['open'][i] - df['close'][i] > 0 :
         lista.append(df['open'][i] - df['close'][i])
         listb.append(0.0)
@@ -30,13 +34,14 @@ for i in range(100):
         listb.append(df['open'][i] - df['close'][i])
 
 plt.subplot(3,  1,  3)
-plt.bar(df['date'][0:100], lista, align = 'center', color='r')
+
+plt.bar(df['date'][numberI:number], lista, align = 'center', color='r')
 
 listc = []
 for item in listb:
     listc.append(0-item)
 
-plt.bar(df['date'][0:100], listc, align = 'center', color='g')
+plt.bar(df['date'][numberI:number], listc, align = 'center', color='g')
 
 
 plt.savefig('image002.png')
