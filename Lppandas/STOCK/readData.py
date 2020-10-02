@@ -5,7 +5,7 @@ import pylab
 # 创建一个 10*20 的点, 分辨率 200
 plt.figure(figsize=(20, 24), dpi=200)
 
-df = pd.read_csv('sh600000.csv')
+df = pd.read_csv('../stockData/sh600000.csv')
 
 print(df)
 
