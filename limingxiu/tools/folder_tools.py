@@ -132,4 +132,10 @@ image_paths = get_image_paths(source_folder_path=source_folder_path, file_ends=i
 folders = get_target_folder_paths(target_folder_path=target_folder_path)
 maps = get_batch_image_folders(image_paths=image_paths, folder_paths=folders)
 for item in maps:
+    
+    print('------------------------------------------------------------------------')
     print(item)
+    for create_image_path in get_image_paths(source_folder_path=item.get('folder_path')):
+        print(item.get('image_path'), create_image_path)
+    print('------------------------------------------------------------------------')
+    
