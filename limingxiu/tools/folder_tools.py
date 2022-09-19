@@ -115,7 +115,7 @@ def get_batch_image_folders(image_paths: list, folder_paths: list) -> list:
     image_folder_maps = []
 
     for image_path in image_paths:
-        folder_path = get_folder_path_by_image(image_path=image_path, folder_paths=folders)
+        folder_path = get_folder_path_by_image(image_path=image_path, folder_paths=folder_paths)
         if not folder_path:
             continue
         print_log(info='--------------------------------------------------------------')
@@ -127,15 +127,23 @@ def get_batch_image_folders(image_paths: list, folder_paths: list) -> list:
     return image_folder_maps
 
 
+def get_image_maps(source_folder_path: str, target_folder_path: str) -> list:
 
-image_paths = get_image_paths(source_folder_path=source_folder_path, file_ends=image_ends)
-folders = get_target_folder_paths(target_folder_path=target_folder_path)
-maps = get_batch_image_folders(image_paths=image_paths, folder_paths=folders)
-for item in maps:
+    image_maps = []
+    image_paths = get_image_paths(source_folder_path=source_folder_path)
+    folders = get_target_folder_paths(target_folder_path=target_folder_path)
+    maps = get_batch_image_folders(image_paths=image_paths, folder_paths=folders)
+    for item in maps:
+        print('------------------------------------------------------------------------')
+        print(item)
+        for create_image_path in get_image_paths(source_folder_path=item.get('folder_path')):
+            print(item.get('image_path'), create_image_path)
+            temp_map = {"source_image": item.get('image_path'), "create_image": create_image_path}
+            image_maps.append(temp_map)
+        print('------------------------------------------------------------------------')
     
-    print('------------------------------------------------------------------------')
+    return image_maps
+    
+    
+for item in get_image_maps(source_folder_path, target_folder_path):
     print(item)
-    for create_image_path in get_image_paths(source_folder_path=item.get('folder_path')):
-        print(item.get('image_path'), create_image_path)
-    print('------------------------------------------------------------------------')
-    
